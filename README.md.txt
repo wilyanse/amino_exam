@@ -1,0 +1,1 @@
+This is a repository for my amino exam that involves creating a slot machine clone.
