@@ -14,10 +14,13 @@ public class SpinController : MonoBehaviour
 
     private bool isSpinning = false;
     public ReelController[] reelControllers;  // Array of reel controller
+
+    public int[][] spinResults; // Array of line payouts
     void Start()
     {
         Debug.Log(spinTxt.text);
         spinBtn.onClick.AddListener(OnClick);
+        spinResults = new int[3][];
     }
 
     private void OnClick()
@@ -44,5 +47,25 @@ public class SpinController : MonoBehaviour
         }
         isSpinning = false;
         spinTxt.text = "Spin";
+    }
+
+    public void CalculateSpinResult()
+    {
+
+        // Step 2: Get the visible symbols from the center positions of each reel
+        SymbolData[] visibleSymbols = GetVisibleSymbols();
+    }
+
+    private SymbolData[] GetVisibleSymbols()
+    {
+        SymbolData[] visibleSymbols = new SymbolData[reelControllers.Length];
+
+        for (int i = 0; i < reelControllers.Length; i++)
+        {
+            // Get the symbol at the center position of each reel
+            visibleSymbols[i] = reelControllers[i].GetVisibleSymbols();
+        }
+
+        return visibleSymbols;
     }
 }

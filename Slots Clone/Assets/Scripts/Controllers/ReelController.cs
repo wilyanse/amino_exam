@@ -6,12 +6,13 @@ using UnityEngine;
 
 public class ReelController : MonoBehaviour
 {
-    public float spinSpeed = 25f;
+    public float spinSpeed;
     public Transform[] symbolPositions;  // Array of symbol positions on the reel
     public Sprite[] symbolSprites;  // Array of symbol sprites
-
+    private SymbolData[] symbolSequence;
     public bool isSpinning = false;
     private int currentSymbolIndex;
+    private int currentSeqIndex;
     public Transform startPos;
     public Transform finalPos;
 
@@ -20,10 +21,11 @@ public class ReelController : MonoBehaviour
     private void Start()
     {
         // Assign initial symbols to the reel
-        SetInitialSymbols();
+        spinSpeed = Random.Range(25.0f, 100.0f);
+        currentSeqIndex = 0;
         currentSymbolIndex = symbolPositions.Length - 1;
-
         showingPositions = new Transform[symbolPositions.Length - 1];
+        SetInitialSymbols();
         // Copy the middle elements into the destination array
         for (int i = 1; i < symbolPositions.Length; i++)
         {
@@ -59,6 +61,7 @@ public class ReelController : MonoBehaviour
     {
         if (!isSpinning)
         {
+            spinSpeed = Random.Range(25.0f, 100.0f);
             isSpinning = true;
         }
     }
@@ -77,7 +80,8 @@ public class ReelController : MonoBehaviour
     {
         foreach (Transform symbolPosition in symbolPositions)
         {
-            symbolPosition.GetComponent<SpriteRenderer>().sprite = symbolSprites[Random.Range(0, symbolSprites.Length)];
+            symbolPosition.GetComponent<SpriteRenderer>().sprite = symbolSprites[symbolSequence[currentSeqIndex].id];
+            currentSeqIndex = Modulo((currentSeqIndex+1), symbolSequence.Length);
         }
     }
 
@@ -93,10 +97,11 @@ public class ReelController : MonoBehaviour
     {
         symbolPositions[currentSymbolIndex].position = startPos.position;
         // Get a random sprite from the symbolSprites array
-        Sprite randomSprite = symbolSprites[Random.Range(0, symbolSprites.Length)];
+        Sprite randomSprite = symbolSprites[symbolSequence[currentSeqIndex].id];
 
         // Assign the random sprite to the symbolPosition object
         symbolPositions[currentSymbolIndex].GetComponent<SpriteRenderer>().sprite = randomSprite;
+        currentSeqIndex = Modulo((currentSeqIndex+1), symbolSequence.Length);
         SnapSymbols();
     }
 
@@ -105,6 +110,18 @@ public class ReelController : MonoBehaviour
             int firstSymbolIndex = Modulo(currentSymbolIndex + i + 1, symbolPositions.Length);
             symbolPositions[firstSymbolIndex].position = showingPositions[i].position;
         }
+    }
+
+    public SymbolData GetVisibleSymbols()
+    {
+        int centerIndex = Mathf.FloorToInt(symbolPositions.Length / 2f);
+        // TODO
+        return null;
+    }
+
+    public void SetSymbolSequence(SymbolData[] sequence)
+    {
+        symbolSequence = sequence;
     }
 
     // modulo
