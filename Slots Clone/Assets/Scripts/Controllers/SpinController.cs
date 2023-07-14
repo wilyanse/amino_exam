@@ -29,6 +29,7 @@ public class SpinController : MonoBehaviour
                 reelController.Spin();
             }
             isSpinning = true;
+            spinTxt.text = "Stop";
         } else
         {
             StopSpinning();
@@ -42,5 +43,6 @@ public class SpinController : MonoBehaviour
             reelController.Stop();
         }
         isSpinning = false;
+        spinTxt.text = "Spin";
     }
 }
