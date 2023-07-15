@@ -1,0 +1,9 @@
+com.DefaultCompany.com.unity.template.mobile2D.launcher-pngs-0 E:\Code\anino_exam\builds\Export Folder\launcher\build\generated\res\pngs\debug
+com.DefaultCompany.com.unity.template.mobile2D.launcher-resValues-1 E:\Code\anino_exam\builds\Export Folder\launcher\build\generated\res\resValues\debug
+com.DefaultCompany.com.unity.template.mobile2D.launcher-rs-2 E:\Code\anino_exam\builds\Export Folder\launcher\build\generated\res\rs\debug
+com.DefaultCompany.com.unity.template.mobile2D.launcher-mergeDebugResources-3 E:\Code\anino_exam\builds\Export Folder\launcher\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.DefaultCompany.com.unity.template.mobile2D.launcher-mergeDebugResources-4 E:\Code\anino_exam\builds\Export Folder\launcher\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.DefaultCompany.com.unity.template.mobile2D.launcher-merged_res-5 E:\Code\anino_exam\builds\Export Folder\launcher\build\intermediates\merged_res\debug
+com.DefaultCompany.com.unity.template.mobile2D.launcher-debug-6 E:\Code\anino_exam\builds\Export Folder\launcher\src\debug\res
+com.DefaultCompany.com.unity.template.mobile2D.launcher-main-7 E:\Code\anino_exam\builds\Export Folder\launcher\src\main\res
+com.DefaultCompany.com.unity.template.mobile2D.launcher-packaged_res-8 E:\Code\anino_exam\builds\Export Folder\unityLibrary\build\intermediates\packaged_res\debug

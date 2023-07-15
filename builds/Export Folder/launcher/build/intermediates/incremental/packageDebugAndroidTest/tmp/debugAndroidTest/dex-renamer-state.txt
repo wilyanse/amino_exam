@@ -1,0 +1,7 @@
+#Sat Jul 15 08:16:18 PST 2023
+base.0=E\:\\Code\\anino_exam\\builds\\Export Folder\\launcher\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.1=E\:\\Code\\anino_exam\\builds\\Export Folder\\launcher\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\9\\classes.dex
+path.0=0/classes.dex
+path.1=9/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

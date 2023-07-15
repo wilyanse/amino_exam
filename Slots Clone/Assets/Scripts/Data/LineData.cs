@@ -1,7 +1,9 @@
 [System.Serializable]
 public class LineData
 {
-    public int[] line; // Line configuration (0 = no symbol, 1 = symbol)
-    public int minSymbolCount; // Minimum number of symbols on the line for a win
-    public int[] payouts; // Payout values based on the number of symbols
+    public int[] reelInd; // reel index for check which rows of each reel to check
+
+    public LineData(int[] reelInd){
+        this.reelInd = reelInd;
+    }
 }

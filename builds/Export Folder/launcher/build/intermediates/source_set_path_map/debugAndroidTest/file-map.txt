@@ -1,0 +1,5 @@
+com.DefaultCompany.com.unity.template.mobile2D.test.launcher-androidTest-0 E:\Code\anino_exam\builds\Export Folder\launcher\build\generated\res\resValues\androidTest\debug
+com.DefaultCompany.com.unity.template.mobile2D.test.launcher-androidTest-1 E:\Code\anino_exam\builds\Export Folder\launcher\build\generated\res\rs\androidTest\debug
+com.DefaultCompany.com.unity.template.mobile2D.test.launcher-mergeDebugAndroidTestResources-2 E:\Code\anino_exam\builds\Export Folder\launcher\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.DefaultCompany.com.unity.template.mobile2D.test.launcher-mergeDebugAndroidTestResources-3 E:\Code\anino_exam\builds\Export Folder\launcher\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.DefaultCompany.com.unity.template.mobile2D.test.launcher-merged_res-4 E:\Code\anino_exam\builds\Export Folder\launcher\build\intermediates\merged_res\debugAndroidTest
